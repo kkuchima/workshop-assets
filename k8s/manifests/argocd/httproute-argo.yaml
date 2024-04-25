@@ -1,0 +1,20 @@
+kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1beta1
+metadata:
+  name: internal-store-route
+  namespace: argocd
+  labels:
+    gateway: argo-gateway
+spec:
+  parentRefs:
+  - kind: Gateway
+    namespace: argocd
+    name: argo-gateway
+  hostnames:
+  - "35.190.29.135.nip.io"
+  rules:
+  - backendRefs:
+    - group: ""
+      kind: Service
+      name: argocd-server
+      port: 80

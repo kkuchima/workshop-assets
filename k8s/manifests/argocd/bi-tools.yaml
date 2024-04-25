@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: config-management
+  project: default
   source:
     repoURL: https://github.com/kkuchima/workshop-assets
     targetRevision: main

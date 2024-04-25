@@ -1,0 +1,16 @@
+apiVersion: networking.gke.io/v1
+kind: GCPBackendPolicy
+metadata:
+  name: backend-policy
+  namespace: argocd
+spec:
+  default:
+    iap:
+      enabled: true
+      oauth2ClientSecret:
+        name: iap
+      clientID: 1072516076243-b9lpo8r9oclf3nvj1qg6vjif5l1srvj6.apps.googleusercontent.com
+  targetRef:
+    group: ""
+    kind: Service
+    name: argocd-server
