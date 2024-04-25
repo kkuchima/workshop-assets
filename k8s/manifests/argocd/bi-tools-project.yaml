@@ -8,7 +8,7 @@ metadata:
 spec:
   description: config-management tools
   sourceRepos:
-    - "https://github.com/kkuchima/workshop-assets/*"
+    - "*"
   destinations:
     - namespace: argocd
       server: https://kubernetes.default.svc
