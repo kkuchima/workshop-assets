@@ -16,3 +16,9 @@ repoServer:
 
 applicationSet:
   replicas: 2
+
+params:
+  server.insecure: true
+
+service:
+  servicePortHttp: 8080

@@ -1,0 +1,11 @@
+repositories:
+ - name: superset
+   url: http://apache.github.io/superset/
+
+releases:
+  - name: superset
+    namespace: superset
+    chart: superset/superset
+    version: 0.12.9
+    values:
+      - ./values.yaml
